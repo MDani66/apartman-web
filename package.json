@@ -1,0 +1,27 @@
+{
+  "name": "static-project-travel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass assets/stylesheets/style.scss assets/stylesheets/style.css --watch",
+    "dev": "concurrently \"live-server --ignore=db .\" \"npm run sass\" \"json-server --watch db/db.json\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Strukturavaltas-Frontend-2022/static-project-travel.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Strukturavaltas-Frontend-2022/static-project-travel/issues"
+  },
+  "homepage": "https://github.com/Strukturavaltas-Frontend-2022/static-project-travel#readme",
+  "devDependencies": {
+    "concurrently": "^7.3.0",
+    "json-server": "^0.17.0",
+    "live-server": "^1.2.2",
+    "sass": "^1.54.8"
+  }
+}

@@ -1,0 +1,58 @@
+
+@use "../base" as *;
+
+
+.promo-container{
+    display: grid;
+    gap: 2rem;
+    grid-auto-rows: 10rem;
+    @media only screen and (min-width: ($large / 2)){
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media only screen and (min-width: $large){
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    width: 100%;
+    padding: 2rem;
+    background-image: url("/assets/img/pexels-photo-2909067.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: #aaa;
+    background-blend-mode: multiply;
+
+    color: darken($white, 20%);
+}
+.promo{
+    display: flex;
+    gap: 1rem;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+
+    padding: 1rem;
+
+    text-align: center;
+
+
+    & svg path{
+        stroke: currentColor;
+        stroke-width: 5;
+        stroke-linecap: round;
+    }
+}
+.promo__number{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    color: $primary;
+    font-size: 4rem;
+    font-weight: 800;
+
+    text-shadow: 0 0 .5em black;
+}

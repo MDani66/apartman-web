@@ -1,0 +1,35 @@
+@use "vars" as *;
+
+@mixin defaultButton() {
+    $color: $primary;
+
+    min-width: 100px;
+    min-height: 40px;
+    // border-radius: 100px;
+        // elem oldalhosszhoz képest kis méret (<50%) + minden oldalról kerekít => lekerekített
+    // border-radius: 50%;
+        // elem oldalhosszhoz képest nagy méret (>=50%) + minden oldalról kerekít => ovális
+    border-radius: 9999vmax;
+        // (css trick) inline oldal mindig kerek, block oldal felől csak lekerekített 
+    padding: 1rem;
+    background-color: $color;
+
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Pacifico", sans-serif;
+    color: $black;
+    font-weight: 700;
+
+    box-shadow: 0 .25rem .5rem #0002;
+
+    transition: transform 200ms ease-out,
+                background-color 200ms ease-in;
+    &:active{
+        transform: scale(.95);
+    }
+    &:hover, &:focus-within{
+        background-color: darken($color, 10%);
+    }
+
+
+}

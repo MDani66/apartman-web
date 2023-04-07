@@ -1,0 +1,221 @@
+@use "../base" as *;
+
+.contact-container {
+    width: 100%;
+    // height: 32rem;
+
+    background-image: url("/assets/img/pexels-photo-3520653.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    padding-block: 4rem;
+    padding-inline: 2rem;
+
+    @media only screen and (min-width: $medium) {
+        padding-inline: 15%;
+    }
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    gap: 2rem;
+    // height: 100%;
+
+    text-align: center;
+
+    &__form {
+        width: 100%;
+        padding: 1rem;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+
+        & .form__field {
+            width: 100%;
+
+            display: flex;
+            flex-direction: column;
+
+            &>* {
+                max-width: 100%;
+                min-width: 100%;
+                padding-inline: 1ch;
+                padding-block: .25ch;
+            }
+
+            & input {
+                min-height: 2rem;
+
+            }
+
+            & textarea {
+                min-height: 20vh;
+            }
+        }
+
+    }
+
+    &__title {
+        font-size: 2.5rem;
+
+        @media only screen and (min-width :$medium ) {
+            font-size: 4rem;
+        }
+
+    }
+
+    &__p {
+        @media only screen and (min-width :$medium ) {
+            font-size: 1.5rem;
+        }
+    }
+
+    &__label {
+        border-radius: 5px 5px 0px 0px;
+        background-color: #fff4;
+        backdrop-filter: blur(5px);
+        border: 1px solid white;
+
+        //font-size: 1.5rem;
+        text-align: left;
+        //text-transform: uppercase;
+    }
+
+    &__input {
+
+        border: none !important;
+        border-radius: 0px 0px 5px 5px;
+    }
+
+    &__button {
+        @include defaultButton;
+
+        // min-width: 20%;
+        width: fit-content;
+        padding-block: .5rem;
+    }
+}
+
+.form-tooltip.form-tooltip {
+    visibility: hidden;
+    $size: 1rem;
+    $buffer: .5rem;
+    position: relative;
+    margin-top: $size;
+    padding: $buffer;
+    background-color: black;
+    color: white;
+    min-width: 0;
+    width: fit-content;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: -1.75*$size;
+        left: calc(50% - #{$size});
+        width: 0;
+        border: $size solid transparent;
+        border-bottom: $size solid black;
+    }
+}
+
+
+
+.contact__input.invalid+.form-tooltip {
+    visibility: visible;
+}
+
+
+
+
+#contact-message {
+    height: 5rem;
+}
+
+// #mail-alert {
+//     display: none;
+//     float: right;
+
+//     padding-right: .3rem;
+
+//     color: $black;
+// }
+
+#message-counter {
+    float: right;
+
+    padding-right: .3rem;
+}
+
+#form-snackbar {
+    @include defaultButton;
+    background-color: palegreen;
+
+    visibility: hidden;
+    position: fixed;
+    z-index: 1;
+    bottom: 4rem;
+
+    pointer-events: none;
+}
+
+#form-snackbar.show {
+    visibility: visible;
+
+    // animation: fadein 0.5s, fadeout 0.5s 4s;
+    animation: snack-anim 4s;
+}
+
+@keyframes snack-anim {
+    0% {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    12% {
+        bottom: 1rem;
+        opacity: 1;
+    }
+
+    88% {
+        bottom: 1rem;
+        opacity: 1;
+    }
+
+    100% {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+// @keyframes fadein {
+//     from {
+//         bottom: 0;
+//         opacity: 0;
+//     }
+
+//     to {
+//         bottom: 1rem;
+//         opacity: 1;
+//     }
+// }
+
+// @keyframes fadeout {
+//     from {
+//         bottom: 1rem;
+//         opacity: 1;
+//     }
+
+//     to {
+//         bottom: 0;
+//         opacity: 0;
+//     }
+// }

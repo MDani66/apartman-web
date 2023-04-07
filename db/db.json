@@ -1,0 +1,23 @@
+{
+  "messages": [],
+  "blogs": [
+    {
+      "imageurl": "/assets/img/pexels-photo-555790.jpg",
+      "imagealt": "A very handsome dude.",
+      "name": "John Jackson",
+      "motto": "There are two types of people who will tell you that you cannot make a difference in this world: those who are afraid to try and those who are afraid you will succeed."
+    },
+    {
+      "imageurl": "/assets/img/grayscale-photography-of-woman-wearing-coat-and-fedora-hat-2947337.jpg",
+      "imagealt": "A very pretty woman",
+      "name": "Linda Larson",
+      "motto": "Every destination you’ll visit leaves its own unique memory. Our travels through Sri Lanka, Myanmar, or Petra in Jordan already give us goosebumps. As this travel quote says: Make memories all over the world!"
+    },
+    {
+      "imageurl": "/assets/img/third portrait.avif",
+      "imagealt": "A big boy.",
+      "name": "Alex Lint",
+      "motto": "At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution."
+    }
+  ]
+}

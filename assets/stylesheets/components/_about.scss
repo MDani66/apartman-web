@@ -1,0 +1,55 @@
+@use "../base" as *;
+
+.about {
+
+  background-image: url('/assets/img/pexels-photo-1428277.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  padding-bottom: 8rem;
+}
+
+.content {
+  display: flex;
+
+  flex-flow: column nowrap;
+  width: 100%;
+
+  & p {
+    width: 100%;
+    align-self: flex-end;
+    @media only screen and (min-width:$medium) {
+      width: 80%;
+    }
+    
+    @media only screen and (min-width:$large) {
+      width: 70%;
+    }
+  }
+}
+
+.about_section {
+  padding: 3rem;
+  font-size: 3rem;
+  text-align: left;
+}
+
+.c1 {
+  line-height: 2rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+
+
+}
+
+.c2 {
+  color: $primary;
+  font-weight: bold;
+  line-height: 2rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-top: 4rem;
+
+
+}
+

@@ -1,0 +1,75 @@
+@use "../base" as *;
+
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1rem;
+  z-index: 9999;
+
+
+}
+
+.navItems {
+  display: inline-block;
+  color: $light-grey;
+
+  & a{
+    all: unset;
+    cursor: pointer;
+  }
+
+  +.menu {
+    float: right;
+
+    .dropButton>svg>path {
+      stroke: $dark-grey;
+      stroke-width: 3;
+      stroke-linecap: square;
+    }
+  }
+}
+
+.dropdownContent {
+  display: block;
+  transform-origin: top;
+  transform: scaleY(0);
+
+  transition: transform 300ms ease-in-out;
+  &.show{
+    transform: scaleY(1);
+  }
+
+
+  position: absolute;
+  min-width: 100%;
+  height: max-content;
+  right: 0;
+  z-index: 1;
+  padding: 5rem 0;
+  @media only screen and (min-width: $medium) {
+    min-width: 6rem;
+    height: auto;
+    padding: .3rem;
+  }
+
+  list-style: none;
+  background-color: $black;
+  text-align: center;
+
+  a {
+    &:hover {
+      background-color: $dark-gray
+    }
+
+
+    display: block;
+
+    padding: .5rem 1rem;
+
+    color: $primary;
+    text-decoration: none;
+  }
+
+}

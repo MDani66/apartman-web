@@ -1,0 +1,56 @@
+
+@use "vars" as *;
+
+
+html{
+    scroll-behavior: smooth;
+}
+*,*::before, *::after{
+    box-sizing: border-box !important;
+    //important mert az "all: unset" EZT A PROPERTIYT visszaállítja content-boxra (alapértelmezett érték, not inherited)
+    margin: 0;
+    padding: 0;
+}
+::selection{
+    background-color: $primary;
+    color: $black;
+}
+
+
+
+.main-wrapper{
+    max-width: $xxl;
+    margin: auto;
+}
+
+
+
+a:link {
+    color:$blue;
+    text-decoration-color: currentColor;
+}
+body{
+    background-color: $dark-gray;
+}
+button{
+    all: unset;
+
+    cursor: pointer;
+}
+p{
+    color: darken($white, 15%);
+    font-weight: 300;
+}
+textarea{
+    font-family: $font;
+}
+ul{
+    all: unset;
+
+    display: block;
+    list-style-type: disc;
+}
+
+
+
+

@@ -1,0 +1,70 @@
+
+@use "../base" as *;
+
+
+
+.hero-container{
+    width: 100%;
+    height: 40rem;
+    position: relative;
+
+    overflow: hidden;
+
+    & img{
+        object-fit: cover;
+    }
+    & [data-layer]{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+}
+.hero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    height: 100%;
+    padding-block: 3rem;
+    @media only screen and (min-width:$medium){
+        padding-inline: 3rem;
+    }
+    // background-image: url("/assets/img/pexels-photo-917494.jpeg");
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // background-position: center;
+}
+.hero__head{
+    padding: 2rem;
+
+    color: $black;
+    font-size: 6rem; 
+}
+.hero__subhead{
+
+    font-size: 1.5rem;
+    @media only screen and (min-width: $medium){
+        font-size: 2.25rem;
+    }
+}
+.hero__content{
+
+    text-align: center;
+    
+    & p{
+        margin: 2rem;
+    }
+    & button{
+        @include defaultButton;
+
+        min-width: 20%;
+        padding-block: .5rem;
+
+        & a{
+            all: unset;
+        }
+    }
+
+}
